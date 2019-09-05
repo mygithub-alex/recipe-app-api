@@ -9,5 +9,3 @@ before_script: pip install docker-compose
 
 script:
   - docker-compose run app sh -c "python manage.py test && flake8"
-  - "! git grep ' $' -- \\*.rb \\*.js \\*.other-file-types | grep -v -e 'FILE_TO_IGNORE'
-  -e 'OTHER_FILE_TO_IGNORE"
